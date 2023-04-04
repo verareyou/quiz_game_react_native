@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.poorhimanshu.quizGame"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "b6a21708-5fa0-41af-a44a-f05b1af64adb"
+      }
+    },
+    "owner": "poorhimanshu"
   }
 }
