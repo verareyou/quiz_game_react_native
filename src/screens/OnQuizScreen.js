@@ -1,7 +1,6 @@
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
-import { Option } from '../components';
 
 const OnQuizScreen = ({ route }) => {
   const navigation = useNavigation();

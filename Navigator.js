@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { EditQuizScreen, HomeScreen, LoginScreen, QuizDetailScreen } from './src/screens';
@@ -22,7 +22,7 @@ export const LoggedInScreens = () => {
                     options={{
                         animation: 'fade_from_bottom',
                         headerShown: false,
-                        statusBarTranslucent:true
+                        statusBarTranslucent: true
                     }}
                 />
                 <Stack.Screen
@@ -31,7 +31,7 @@ export const LoggedInScreens = () => {
                     options={{
                         animation: 'fade_from_bottom',
                         headerShown: false,
-                        statusBarTranslucent:true
+                        statusBarTranslucent: true
                     }}
                 />
                 <Stack.Screen
@@ -40,7 +40,7 @@ export const LoggedInScreens = () => {
                     options={{
                         animation: 'fade_from_bottom',
                         headerShown: false,
-                        statusBarTranslucent:true
+                        statusBarTranslucent: true
                     }}
                 />
                 <Stack.Screen
@@ -49,12 +49,12 @@ export const LoggedInScreens = () => {
                     options={{
                         animation: 'fade_from_bottom',
                         headerShown: false,
-                        statusBarTranslucent:true
+                        statusBarTranslucent: true
                     }}
                 />
 
             </Stack.Navigator>
-            
+
         </NavigationContainer >
 
     </>

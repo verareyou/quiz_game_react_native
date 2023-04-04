@@ -21,13 +21,13 @@ const QuizDetailScreen = ({ route, navigation }) => {
 
       <View className=' w-full '>
         <TouchableOpacity
-        onPress={() => navigation.navigate('ON',{data})}
-        activeOpacity={0.9}
-        className=' bg-[#43475a] p-4 mb-4 flex justify-center items-center rounded-3xl '
+          onPress={() => navigation.navigate('ON', { data })}
+          activeOpacity={0.9}
+          className=' bg-[#43475a] p-4 mb-4 flex justify-center items-center rounded-3xl '
         >
-        <Text
-          className=' text-[#f8fcff] font-thin text-3xl '
-        >Start</Text>
+          <Text
+            className=' text-[#f8fcff] font-thin text-3xl '
+          >Start</Text>
         </TouchableOpacity>
       </View>
 

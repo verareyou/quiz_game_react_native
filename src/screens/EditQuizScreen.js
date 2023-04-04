@@ -1,7 +1,7 @@
 import { View, Text, ScrollView, SafeAreaView, TouchableOpacity, TextInput } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { useStore } from '../../providers'
-import { addDoc, collection, deleteDoc, doc, updateDoc } from 'firebase/firestore/lite';
+import { deleteDoc, doc, updateDoc } from 'firebase/firestore/lite';
 import { db } from '../../firebase/config';
 // import { Icon } from 'react-native-vector-icons/Icon';
 

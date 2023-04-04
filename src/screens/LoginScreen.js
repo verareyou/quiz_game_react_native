@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Image, SafeAreaView, Text, TextInput, TouchableOpacity, View, ScrollView } from 'react-native'
 import { authentication } from '../../firebase/config';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { createUser, getUser } from '../../firebase/operations';
 // import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const LoginScreen = ({ navigation }) => {
+const LoginScreen = ({ }) => {
 
     const [isLogin, setIsLogin] = useState(true);
     const [fullName, setFullName] = useState('')
@@ -43,7 +43,7 @@ const LoginScreen = ({ navigation }) => {
                 className=' w-full p-6 flex-1 flex justify-end flex-col gap-y-[30%] items-center '
             >
                 <Text className=' text-[#d6d6e8] font-black text-4xl translate-y-5  '>
-                   {isLogin ? 'Welcome back' : 'Register now'}
+                    {isLogin ? 'Welcome back' : 'Register now'}
                 </Text>
 
                 <View

@@ -1,27 +1,21 @@
-import { View, Text, SafeAreaView, TouchableOpacity, ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, ScrollView } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { authentication, db } from '../../firebase/config';
 import { collection, getDocs } from 'firebase/firestore/lite';
-import { StatusBar } from 'expo-status-bar';
 import { useNavigation } from '@react-navigation/native';
 import { getUser } from '../../firebase/operations';
 import { List } from '../components';
 import { useStore } from '../../providers';
 
 const AllQuizScreen = () => {
-    const navigation = useNavigation();
     const { listen } = useStore()
     const [quizzes, setQuizzes] = useState([]);
-    const [user, setUser] = useState(null);
 
     useEffect(() => {
         const getAllQuizzes = async () => {
             try {
                 const qs = await getDocs(collection(db, 'quizzes'));
                 const data = qs.docs.map(doc => ({ id: doc.id, ...doc.data() }))
-                // console.log(data)
-                const usered = await getUser(authentication.currentUser.uid);
-                setUser(usered)
                 setQuizzes(data);
             } catch (err) {
                 console.log(err.message)
