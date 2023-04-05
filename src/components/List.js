@@ -19,10 +19,15 @@ const List = ({quizzes}) => {
                         >points {quiz.questions.length}
                         </Text>
                         <Text
+                            className=' text-[#81848e] text-sm font-light '
+                        >Questions {quiz.questions.length}
+                        </Text>
+                        <Text
                             className=' text-[#5a5c63] text-3xl font-black '
                         >
                             {quiz.title}
                         </Text>
+                       
                     </TouchableOpacity>
 
                 ))
