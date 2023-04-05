@@ -40,14 +40,18 @@ const LoginScreen = ({ }) => {
             className=' flex flex-col bg-[#222128] flex-1 items-center justify-center '
         >
             <View
-                className=' w-full p-6 flex-1 flex justify-end flex-col gap-y-[30%] items-center '
+                className=' w-full p-6 flex-1 flex justify-end flex-col items-center '
             >
-                <Text className=' text-[#d6d6e8] font-black text-4xl translate-y-5  '>
+                <Image
+                    source={require('../../assets/icon.png')}
+                    className=" h-20 w-20  "
+                />
+                <Text className={' text-[#d6d6e8] font-black text-4xl  ' + (isLogin ? 'mt-20' : 'mt-10') }>
                     {isLogin ? 'Welcome back' : 'Register now'}
                 </Text>
 
                 <View
-                    className=' gap-3 w-full flex justify-center items-center '
+                    className={' gap-3 w-full flex justify-center items-center ' + (isLogin ? 'mt-20' : 'mt-10')  }
                 >
 
                     {!isLogin && (
@@ -96,7 +100,7 @@ const LoginScreen = ({ }) => {
 
                 </View>
 
-                <View className='flex justify-center gap-5 items-center w-full '>
+                <View className={'flex justify-center gap-5 items-center w-full ' + (isLogin ? 'mt-20' : 'mt-10')  } >
 
                     <TouchableOpacity
                         className=' w-full flex justify-center items-center bg-white p-5 px-8 duration-200 rounded-[20px] '
