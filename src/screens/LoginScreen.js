@@ -113,7 +113,7 @@ const LoginScreen = ({ }) => {
                             }
                         }}>
                         <Text className='text-lg text-black font-black '>
-                            {isLogin ? ('Log in') : ('Sign in')}
+                            {isLogin ? ('Log in') : ('Sign up')}
                         </Text>
                     </TouchableOpacity>
                     <View >
@@ -123,7 +123,7 @@ const LoginScreen = ({ }) => {
                             {isLogin ? 'Don\'t have an account?' : 'have an account?'}
                             <Text
                                 className=' text-sm text-[#ffffff86] '
-                                onPress={() => setIsLogin(!isLogin)} >{isLogin ? (' Sign in') : (' Log in')}</Text>
+                                onPress={() => setIsLogin(!isLogin)} >{isLogin ? (' Sign up') : (' Log in')}</Text>
                         </Text>
                     </View>
                 </View>
