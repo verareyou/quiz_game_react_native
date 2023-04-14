@@ -88,6 +88,9 @@ const CreateQuizScreen = () => {
                     <Text className=' text-[#5a5c63] ml-12 flex-1 text-center font-black text-2xl '>
                         Create New Quiz❔
                     </Text>
+
+                    {/* Reset Button */}
+                    
                     <Text onPress={() => {
                         setQuestions([{
                             id: 1,
@@ -102,39 +105,49 @@ const CreateQuizScreen = () => {
                         clear
                     </Text>
                 </View>
-                <TextInput
+
+                <TextInput // Quiz Name
                     placeholder='Quiz Name'
                     placeholderTextColor="#5a5c63"
                     className=' text-lg px-4 py-3 border border-[#5a5c633a] rounded-xl placeholder:text-[#5a5c63] text-[#5a5c63] '
                     value={quizName}
                     onChangeText={text => setQuizName(text)}
                 />
-                <TextInput
+                <TextInput // Quiz Description
                     placeholder='Description'
                     placeholderTextColor="#5a5c63"
                     className=' text-lg mt-2 p-4 border border-[#5a5c633a] rounded-xl placeholder:text-[#fff] text-[#5a5c63] '
                     value={description}
                     onChangeText={text => setDescription(text)}
                 />
+
+                {/* Questions */}
+
                 {questions.map(question => (
                     <View
                         className=' bg-[#a39ebb1b] mt-6 p-4 rounded-xl w-full  '
                         key={question.id}>
                         <View className=' flex flex-row justify-between w-full mb-2  '>
-                            <TextInput
+
+                            <TextInput // Question Title
                                 placeholder='Question title'
                                 placeholderTextColor="#5a5c63aa"
                                 className=' text-lg border w-[75%] p-4 border-[#5a5c633a] rounded-xl placeholder:text-[#fff] text-[#5a5c63] '
                                 value={question.text}
-                                onChangeText={text => handleQuestionChange(question.id, 'text', text)} />
-                                <TouchableOpacity
+                                onChangeText={text => handleQuestionChange(question.id, 'text', text)}
+                            />
+
+                            <TouchableOpacity // Delete Question
                                 onPress={() => handleDeleteQuestion(question.id)}
                                 activeOpacity={0.1}
                                 className=' border flex justify-center items-center w-[20%] border-[#5a5c633a] rounded-xl '
-                                >
-                                    <Text className='text-3xl'>x</Text>
-                                </TouchableOpacity>
+                            >
+                                <Text className='text-3xl'>x</Text>
+                            </TouchableOpacity>
                         </View>
+
+                        {/* Options List */}
+
                         {question.options.map((option, index) => (
                             <View
                                 className=' flex flex-row mt-[8px] h-12 w-full '
@@ -156,7 +169,8 @@ const CreateQuizScreen = () => {
                         ))}
                     </View>
                 ))}
-                <TouchableOpacity
+
+                <TouchableOpacity // Add Question Button
                     activeOpacity={0.7}
                     className=' bg-[#a39ebb1b] flex mt-3 justify-center items-center p-5 rounded-xl '
                     onPress={() => setQuestions(prevState => [...prevState, { id: prevState.length + 1, text: '', options: ['', '', '', ''], correctOption: null }])}>
